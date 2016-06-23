@@ -1,0 +1,56 @@
+/*
+    	 * Charset utf8 = StandardCharsets.UTF_8;
+List<String> lines = Arrays.asList("1st line", "2nd line");
+byte[] data = {1, 2, 3, 4, 5};
+
+try {
+    Files.write(Paths.get("file1.bin"), data);
+    Files.write(Paths.get("file2.bin"), data,
+            StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+    Files.write(Paths.get("file3.txt"), "content".getBytes());
+    Files.write(Paths.get("file4.txt"), "content".getBytes(utf8));
+    Files.write(Paths.get("file5.txt"), lines, utf8);
+    Files.write(Paths.get("file6.txt"), lines, utf8,
+            StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+    	//System.out.println(buffer.toString());
+    	
+    	//String customer=orderTime+"|"+processingTime+"|"+firstName+"|"+lastName+"|"+cardholdername+"|"+xref+"|"+xrefType+"|"+list1+"|"+list2+"|"+payload;
+    	
+//    	String msg = "hello";
+//        try {
+//			Files.write(Paths.get("/Users/lcle/git/wmgit/bitbucket/fake-data-generator/fake-data-geneartor/filename.txt"), msg.getBytes());
+//			msg="hello2";
+//			Files.write(Paths.get("/Users/lcle/git/wmgit/bitbucket/fake-data-generator/fake-data-geneartor/filename.txt"), msg.getBytes(), StandardOpenOption.APPEND);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+    	}
+    }
+    
+//    public void writeTofile(String line)
+//    {
+//    	try (Writer writer = new BufferedWriter(new OutputStreamWriter(
+//                new FileOutputStream("/Users/lcle/git/wmgit/bitbucket/fake-data-generator/fake-data-geneartor/filename.txt"), "utf-8"))) {
+//    		writer.write(line);
+//    	}catch (Exception e){
+//    		System.out.println(e);
+//    	
+//    	}
+//    
+//    }
+    /*try(FileWriter fw = new FileWriter("outfilename", true);
+    BufferedWriter bw = new BufferedWriter(fw);
+    PrintWriter out = new PrintWriter(bw))
+{
+    out.println("the text");
+    //more code
+    out.println("more text");
+    //more code
+} catch (IOException e) {
+    //exception handling left as an exercise for the reader
+}
+*/
